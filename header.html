@@ -1,5 +1,5 @@
 <header>
-  <div class="logo">Christian Model</div>
+  <div class="logo"><a href="index.html">Christian Model</a></div>
   <nav>
     <ul>
       <li><a class="navbar" href="index.html">Home</a></li>
@@ -14,7 +14,6 @@
     fetch("header.html")
             .then(response => response.text())
             .then(data => document.getElementById("header-placeholder").innerHTML = data);
-
     fetch("footer.html")
             .then(response => response.text())
             .then(data => document.getElementById("footer-placeholder").innerHTML = data);
@@ -28,6 +27,10 @@
     padding: 15px 30px;
     background-color: forestgreen;
     color: white;
+  }
+  .logo a {
+    color: white;
+    text-decoration: none;
   }
   .navbar:hover {
     text-decoration-line: underline;
