@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Christian Model</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      fetch("header.html")
+              .then(response => response.text())
+              .then(data => document.getElementById("header-placeholder").innerHTML = data);
+
+      fetch("footer.html")
+              .then(response => response.text())
+              .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+    });
+  </script>
+
+  <style>
+    body {
+      font-family: "Work Sans", sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 50px;
+    }
+
+    .profile-photo {
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background-color: #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .profile-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .text-buttons {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      max-width: 500px;
+      min-width: 300px;
+    }
+
+    .hello-text {
+      font-size: 3.2em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .intro-text {
+      font-size: 1.2em;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 25px;
+    }
+
+    .button {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      background-color: forestgreen;
+      transition: background-color 0.3s, color 0.3s;
+      flex-shrink: 0;
+    }
+
+    .button:hover {
+      background-color: white;
+      color: forestgreen;
+      border: 2px solid forestgreen;
+    }
+
+    /* Responsive Anpassung */
+    @media (max-width: 900px) {
+      .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+      }
+
+      .text-buttons {
+        align-items: center;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+    }
+
+  </style>
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+<main>
+  <div class="content">
+    <div class="profile-photo">
+      <img src="me.jpg" alt="My Photo">
+    </div>
+    <div class="text-buttons">
+      <div class="hello-text">Hello</div>
+      <div class="intro-text">
+        Welcome to my personal website! Here you can find my CV, explore my projects, and get in touch with me.
+      </div>
+      <div class="buttons">
+        <a href="CV.html" class="button">CV</a>
+        <a href="Projects.html" class="button">Projects</a>
+        <a href="Contact.html" class="button">Contact</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="footer-placeholder"></div>
+</body>
+</html>

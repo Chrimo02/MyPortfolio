@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Christian Model</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("header-placeholder").innerHTML = data);
+
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+        });
+    </script>
+    <style>
+        /* Allgemeines Styling */
+        body {
+            font-family: "Work Sans", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Hauptbereich */
+        main {
+            width: 80%;
+            margin: 50px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 32px;
+        }
+
+        .project {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-text {
+            width: 55%;
+        }
+
+        .project-text h2 {
+            font-size: 24px;
+        }
+
+        .project-text p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .project-image {
+            width: 40%;
+        }
+
+        .project-image img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .github-button {
+            display: inline-block;
+            background-color: #2e7d32;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .github-button:hover {
+            background-color: #ffffff;
+            color: forestgreen;
+            border: 2px solid forestgreen;        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+<main>
+    <section class="projects">
+        <h1>Projects</h1>
+
+        <div class="project">
+            <div class="project-text">
+                <h2>Hotel-Management-System</h2>
+                <p>As part of a group project in my backend-systems course, we implemented a backend for managing multiple hotels together with the corresponding bookings and guests.
+                    We structured our software according to the principles of the hexagonal architecture and used Java in combination with the Quarkus framework.
+                </p>
+                <p>Please check out the repository on my GitHub for further information and an introduction video to this project.</p>
+                <a href="https://github.com/Chrimo02/hotel_management_system.git" class="github-button" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project-image">
+                <img src="hotel.jpg" alt="Hotel-Management-System">
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-text">
+                <h2>Linux grep command</h2>
+                <p>As part of a group project in my system-oriented-programming course, we implemented a limited version of the grep command in C.
+                    The program allows users to search for patterns within files and directories, supporting concurrency, dynamic data structures, and integration with Linux pipelines.
+                </p>
+                <p>Please check out the repository on my GitHub for further information and an introduction video to this project.</p>
+                <a href="https://github.com/Chrimo02/Linux-Command.git" class="github-button" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project-image">
+                <img src="terminal.jpg" alt="Linux grep command">
+            </div>
+        </div>
+    </section>
+</main>
+    <div id="footer-placeholder"></div>
+</body>
+</html>

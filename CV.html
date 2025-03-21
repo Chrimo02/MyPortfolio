@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV | Christian Model</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("header-placeholder").innerHTML = data);
+
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+        });
+    </script>
+    <style>
+        body {
+            font-family: "Work Sans", sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        main {
+            flex: 1;
+            padding: 40px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 40px;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .entry {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .date-column {
+            text-align: right;
+            font-weight: 300;
+        }
+
+        .content-column {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        .title {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .subtitle {
+            font-weight: 600;
+        }
+
+        .description {
+            font-weight: 300;
+        }
+
+        .description ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .description li {
+            margin-bottom: 5px;
+            line-height: 1.6;
+        }
+
+        .note {
+            margin-top: 5px;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        /* Responsive Adjustment */
+        @media (max-width: 768px) {
+            .entry {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .date-column {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+<main>
+    <h1>CV</h1>
+
+    <div class="section">
+        <h2>Professional Experience</h2>
+
+        <div class="entry">
+            <div class="date-column">2021-2023</div>
+            <div class="content-column">
+                <div class="title">Financial Administration</div>
+                <div class="subtitle">CeraCon GmbH</div>
+                <div class="description">
+                    <ul>
+                        <li>Management of accounts payable and accounts receivable</li>
+                        <li>Responsibility for debt collection</li>
+                        <li>Monthly closings</li>
+                        <li>Preparation of annual financial statements in cooperation with auditors</li>
+                        <li>Planning and implementation of a document management system</li>
+                        <li>Organizing and managing files and documents</li>
+                        <li>Independent verification of applications and invoices</li>
+                        <li>Managing accounts and tracking account movements</li>
+                        <li>Professional handling of payments</li>
+                        <li>Organizing and preparing meetings and conferences</li>
+                        <li>Tracking incoming payments and debits</li>
+                        <li>Creating and reviewing payment instructions and invoices</li>
+                        <li>Thorough maintenance of customer and supplier data</li>
+                        <li>Processing customer inquiries from domestic and international clients in writing and by telephone</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Education</h2>
+
+        <div class="entry">
+            <div class="date-column">2023-2027</div>
+            <div class="content-column">
+                <div class="title">Bachelor of Engineering</div>
+                <div class="subtitle">THWS</div>
+                <div class="description">Computer Science</div>
+                <div class="note">
+                    Studies began in October 2023<br>
+                    Current GPA: 1.55
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="date-column">2023-2024</div>
+            <div class="content-column">
+                <div class="title">University of Applied Sciences Entrance Qualification</div>
+                <div class="subtitle">Business Track</div>
+                <div class="note">Completed with grade: 1.0</div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="date-column">2018-2021</div>
+            <div class="content-column">
+                <div class="title">Dual Training</div>
+                <div class="subtitle">Industrial Business Management Assistant (IHK)</div>
+                <div class="description">
+                    Training company: CeraCon GmbH<br>
+                    IHK overall result: 90 out of 100 points
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Skills</h2>
+
+        <div class="entry">
+            <div class="date-column"></div>
+            <div class="content-column">
+                <div class="description">
+                    <ul>
+                        <li>Hands-on mentality</li>
+                        <li>Team player</li>
+                        <li>Helpful</li>
+                        <li>Sense of responsibility</li>
+                        <li>Quick analytical comprehension</li>
+                        <li>Efficient and accurate working</li>
+                        <li>Time management</li>
+                        <li>Resilience</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div id="footer-placeholder"></div>
+</body>
+</html>
